@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::resource('perusahaan','perusahaanController');
+Route::resource('lowongan','lowonganController');
 
 Auth::routes();
 

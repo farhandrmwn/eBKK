@@ -22,6 +22,7 @@
     <table class="table table-bordered table-hover table-sm text-center mt-3">
         <tr>
             <th>No</th>
+            <th>Id_Perusahaan</th>
             <th>Nama</th>
             <th>Jenis Industri</th>
             <th>Alamat</th>
