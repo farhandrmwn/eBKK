@@ -30,7 +30,7 @@
                         <form action="{{route('perusahaan.update',$perusahaan->id_perusahaan)}}" method="post">
                             {{csrf_field()}}
                             @method('PUT')
-                            <div class="form-row mt-5">
+                            <div class="form-row ">
                                 <div class="form-group col-md-7 mt-2">
                                     <label for="inputNama">Nama</label>
                                     <input type="text" name="nama" id="inputNama" class="form-control" value="{{$perusahaan->nama}}">

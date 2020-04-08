@@ -33,7 +33,7 @@
         @foreach ($perusahaan as $p)
         <tr>
             <td>{{++$i}}.</td>
-            <td>{{$p->id_perusahaan}}</td>
+            <td hidden="true">{{$p->id_perusahaan}}</td>
             <td>{{$p->nama}}</td>
             <td>{{$p->jenis_industri}}</td>
             <td>{{$p->alamat}}</td>
@@ -41,7 +41,7 @@
             <td>{{$p->bahasa}}</td>
             <td>
                 <form action="{{ route('perusahaan.destroy', $p->id_perusahaan) }}" method="post">
-                    <a class="btn btn-sm btn-success" href="{{route('perusahaan.show',$p->id_perusahaan)}}">Show</a>
+                    <!-- <a class="btn btn-sm btn-success" href="{{route('perusahaan.show',$p->id_perusahaan)}}">Show</a> -->
                     <a class="btn btn-sm btn-warning" href="{{route('perusahaan.edit',$p->id_perusahaan)}}">Edit</a>
                     {{csrf_field()}}
                     @method('DELETE')

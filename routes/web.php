@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 
 Route::resource('perusahaan','perusahaanController');
+
+Route::get('/alumni','AlumniController@index');
+Route::get('/alumni/detail','AlumniController@show');
+Route::get('/alumni/tambah','AlumniController@tambah');
+Route::post('/alumni/store','AlumniController@store');
+Route::get('/alumni/edit/{nis}','AlumniController@edit');
+Route::put('/alumni/update/{nis}','AlumniController@update');
+Route::get('/alumni/delete/{nis}','AlumniController@delete');
