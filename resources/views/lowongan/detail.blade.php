@@ -2,43 +2,43 @@
 <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Detail Perusahaan</h3>
+                <h3>Detail Lowongan</h3>
                 <hr>
             </div>
         </div>
         <div class="row">
-             <div class="col-md-12">
+            <div class="col-md-12">
                 <div class="form-group">
-                    <strong>Id Perusahaan :</strong> {{$perusahaan['id_perusahaan']}}
+                    <strong>ID Lowongan :</strong> {{$lowongan['id_lowongan']}}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <strong>Nama :</strong> {{$perusahaan['nama']}}
+                    <strong>ID Perusahaan :</strong> {{$lowongan['id_perusahan']}}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <strong>Jenis Industri :</strong> {{$perusahaan['jenis_industri']}}
+                    <strong>Jenis Lowongan :</strong> {{$lowongan['jenis_lowongan']}}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <strong>Alamat :</strong> {{$perusahaan['alamat']}}
+                    <strong>Deskripsi :</strong> {{$lowongan['deskripsi']}}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <strong>Situs :</strong> {{$perusahaan['situs']}}
+                    <strong>Requirements :</strong> {{$lowongan['requirements']}}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <strong>Bahasa :</strong> {{$perusahaan['bahasa']}}
+                    <strong>Benefits :</strong> {{$lowongan['benefits']}}
                 </div>
             </div>
             <div class="col-md-12">
-                <a href="{{route('perusahaan.index')}}" class="btn btn-sm btn-success">Back</a>
+                <a href="{{route('lowongan.index')}}" class="btn btn-sm btn-success">Back</a>
             </div>
         </div>
     </div>
