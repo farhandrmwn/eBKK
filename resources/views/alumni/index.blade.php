@@ -35,7 +35,7 @@
                 <td>{{ $a->no_hp }}</td>
                 <td>{{ $a->status }}</td>
                 <td>
-                    <a class="btn btn-sm btn-success" href="/alumni/detail">Show</a>
+                    <a class="btn btn-sm btn-success" href="/alumni/detail{{ $a->nis }}">Show</a>
                     <a class="btn btn-sm btn-warning" href="/alumni/edit/{{ $a->nis }}">Edit</a>
                     <a class="btn btn-sm btn-danger" onClick="return confirm('Yakin?')" href="/alumni/delete/{{ $a->nis }}">Hapus</a>
                     <!-- <button type="submit" class="btn btn-sm btn-danger" onClick="return confirm('Yakin?')">Delete</button> -->
