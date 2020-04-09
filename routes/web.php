@@ -17,25 +17,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard',function(){
-    return view('dashboard');
-});
-
-Route::resource('perusahaan','perusahaanController');
+Auth::routes();
 
 
-Route::get('/alumni','AlumniController@index');
-Route::get('/alumni/detail','AlumniController@show');
-Route::get('/alumni/tambah','AlumniController@tambah');
-Route::post('/alumni/store','AlumniController@store');
-Route::get('/alumni/edit/{nis}','AlumniController@edit');
-Route::put('/alumni/update/{nis}','AlumniController@update');
-Route::get('/alumni/delete/{nis}','AlumniController@delete');
 
-Route::resource('lowongan','lowonganController');
 
+
+Route::get('/home', 'HomeController@index')->name('home');  
+
+
+
+Route::group(['middleware'=>['auth','checkRole:admin,alumni']],function(){
+    Route::get('/dashboard',function(){
+        return view('dashboard');
+    }); 
+    Route::get('/alumni','AlumniController@index');
+    Route::get('/alumni/detail','AlumniController@show');
+    Route::get('/alumni/tambah','AlumniController@tambah');
+    Route::post('/alumni/store','AlumniController@store');
+    Route::get('/alumni/edit/{nis}','AlumniController@edit');
+    Route::put('/alumni/update/{nis}','AlumniController@update');
+    Route::get('/alumni/delete/{nis}','AlumniController@delete');   
+}); 
 
 Route::group(['middleware'=>['auth','checkRole:admin']],function(){
-    Auth::routes();
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/dashboard',function(){
+        return view('dashboard');
+    });  
+    Route::resource('lowongan','lowonganController');
+    Route::resource('perusahaan','perusahaanController');
 }); 
