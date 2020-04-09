@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard',function(){
+    return view('dashboard');
+});
+
 Route::resource('perusahaan','perusahaanController');
-<<<<<<< HEAD
 
 Route::get('/alumni','AlumniController@index');
 Route::get('/alumni/detail','AlumniController@show');
@@ -27,7 +30,7 @@ Route::post('/alumni/store','AlumniController@store');
 Route::get('/alumni/edit/{nis}','AlumniController@edit');
 Route::put('/alumni/update/{nis}','AlumniController@update');
 Route::get('/alumni/delete/{nis}','AlumniController@delete');
-=======
+
 Route::resource('lowongan','lowonganController');
 
 
@@ -35,4 +38,3 @@ Route::group(['middleware'=>['auth','checkRole:admin']],function(){
     Auth::routes();
     Route::get('/home', 'HomeController@index')->name('home');
 }); 
->>>>>>> 7ddbda6293a4b8edf167bcb2f6c570bda6fa50cb
