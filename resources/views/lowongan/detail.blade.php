@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <strong>ID Perusahaan :</strong> {{$lowongan['id_perusahan']}}
+                    <strong>ID Perusahaan :</strong> {{$lowongan['id_perusahaan']}}
                 </div>
             </div>
             <div class="col-md-12">

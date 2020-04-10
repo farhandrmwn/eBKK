@@ -9,8 +9,8 @@
         <h3 class="col-md-10 mt-5">Data Alumni</h3>
         <a href="/alumni/tambah" class="btn btn-sm btn-success col-md-2 mt-5">Tambah Data Alumni</a>
     </div>
-
-    <table class="table table-bordered table-hover table-sm text-center mt-3">
+<br>
+    <table id="table-datatables"class="table table-bordered table-hover table-sm text-center mt-3">
         <thead>
             <tr>
                 <th>No</th>
@@ -45,5 +45,15 @@
         @endforeach
     </table>
 </div>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#table-datatables').DataTable();
+    } );
+</script>
 
 @endsection

@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-<<<<<<< HEAD
 Route::resource('perusahaan','perusahaanController');
 // Route::resource('alumni','AlumniController');
 
@@ -30,10 +28,9 @@ Route::put('/alumni/update/{nis}','AlumniController@update');
 Route::get('/alumni/delete/{nis}','AlumniController@delete');
 
 Route::resource('lowongan','lowonganController');
-=======
+
 Auth::routes();
 
->>>>>>> dede7cd35e89d0c3f256f11447d3b2139272d916
 
 
 
@@ -55,8 +52,7 @@ Route::group(['middleware'=>['auth','checkRole:admin,alumni']],function(){
     Route::get('/alumni/delete/{nis}','AlumniController@delete');   
 }); 
 
-<<<<<<< HEAD
-=======
+
 Route::group(['middleware'=>['auth','checkRole:admin']],function(){
     Route::get('/dashboard',function(){
         return view('dashboard');
@@ -64,4 +60,3 @@ Route::group(['middleware'=>['auth','checkRole:admin']],function(){
     Route::resource('lowongan','lowonganController');
     Route::resource('perusahaan','perusahaanController');
 }); 
->>>>>>> dede7cd35e89d0c3f256f11447d3b2139272d916
