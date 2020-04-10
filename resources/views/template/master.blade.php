@@ -20,8 +20,8 @@
                     <span class="navbar-brand ml-3 col-1">
                         <img src="{{ ('logo-wk.png') }}" width="70" class="mt-1 d-inline-block align-top" alt="">
                         <span class="navbar-text ml-4 text-break text-white">
-                            <p class="h4">BURSA KERJA KHUSUS</p>
-                            <p class="h5">SMK WIKRAMA BOGOR</p>
+                            <p class="h5">BURSA KERJA KHUSUS</p>
+                            <p class="h6">SMK WIKRAMA BOGOR</p>
                         </span>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -29,12 +29,29 @@
                     </span>
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav mr-5 text-uppercase">
-                        <a class="nav-item nav-link mr-5 h5" href="#">Beranda <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link mr-5 h5" href="#">Lowongan</a>
-                        <a class="nav-item nav-link mr-5 h5" href="#">User</a>
+                    <div class="navbar-nav mr-6 text-uppercase">
+                        <a class="nav-item nav-link mr-5 h6" href="#">Beranda <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link mr-5 h6" href="#">Lowongan</a>
+                        <!-- <a class="nav-item nav-link mr-5 h5" href="#">User</a> -->
                     </div>
                 </div>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
             </nav>
         </div>
     </header>
@@ -83,7 +100,6 @@
 
                 </div>
                 <!-- Grid row-->
-
             </div>
 
 
