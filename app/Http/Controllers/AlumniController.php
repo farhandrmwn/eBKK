@@ -60,13 +60,13 @@ class AlumniController extends Controller
     public function delete($nis)
     {
         $alumni = Alumni::find($nis);
-        $alumni = delete();
+        $alumni->delete();
         return redirect('/alumni');
     }
 
-    public function show()
+    public function show($nis)
     {
-        $alumni = Alumni::all();
-        return view('alumni/detail',['alumni' => $alumni]);
+        $alumni = alumni::find($nis);
+        return view('alumni.detail',['alumni' => $alumni]);
     }
 }
