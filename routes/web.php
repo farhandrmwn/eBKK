@@ -26,6 +26,7 @@ Route::post('/alumni/store','AlumniController@store');
 Route::get('/alumni/edit/{nis}','AlumniController@edit');
 Route::put('/alumni/update/{nis}','AlumniController@update');
 Route::get('/alumni/delete/{nis}','AlumniController@delete');
+Route::get('/alumni/cetak_pdf', 'AlumniController@cetak_pdf');
 
 Route::resource('lowongan','lowonganController');
 

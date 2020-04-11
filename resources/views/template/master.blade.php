@@ -31,7 +31,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav mr-6 text-uppercase">
                         <a class="nav-item nav-link mr-5 h6" href="#">Beranda <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link mr-5 h6" href="#">Lowongan</a>
+                        <a class="nav-item nav-link mr-5 h6" href="{{route('lowongan.index')}}">Lowongan</a>
+                        <a class="nav-item nav-link mr-5 h6" href="{{route('perusahaan.index')}}">Perusahaan</a>
                         <!-- <a class="nav-item nav-link mr-5 h5" href="#">User</a> -->
                     </div>
                 </div>

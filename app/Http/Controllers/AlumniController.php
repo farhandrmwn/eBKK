@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Alumni;
+use PDF;
 
 class AlumniController extends Controller
 {
@@ -12,6 +13,14 @@ class AlumniController extends Controller
     {
         $alumni = Alumni::all();
         return view('alumni/index',['alumni' => $alumni]);
+    }
+
+    public function cetak_pdf()
+    {
+        $alumni = Alumni::all();
+ 
+        $pdf = PDF::loadview('alumni.alumni_pdf',['alumni'=>$alumni]);
+        return $pdf->stream();
     }
 
     public function tambah()

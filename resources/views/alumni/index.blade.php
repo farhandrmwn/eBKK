@@ -44,6 +44,7 @@
         </tbody>
         @endforeach
     </table>
+    <a href="/alumni/cetak_pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
 </div>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">

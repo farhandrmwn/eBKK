@@ -31,7 +31,7 @@
                 </div>
                 <div class="navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav mr-5 text-uppercase">
-                        <a class="nav-item nav-link mr-5 h5" href="#">Kembali<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link mr-5 h5" href="/dashboard">Kembali<span class="sr-only">(current)</span></a>
                     </div>
                 </div>
             </nav>
